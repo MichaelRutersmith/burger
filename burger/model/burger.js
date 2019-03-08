@@ -35,5 +35,5 @@ var burger = {
 };
 
 
-// burgersController.js).
+// export
 module.exports = burger;

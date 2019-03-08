@@ -16,7 +16,7 @@ router.get("/", function(req, res) {
   });
 });
 
-app.get("/favicon.ico", function(req, res) {
+router.get("/favicon.ico", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/favicon.ico"));
 });
 
