@@ -1,11 +1,7 @@
 <div class="row">
-<header class="col-md-12" id="header"><h1>Eat Da Burger!</h1></header>
+<header class="col-md-12" id="header"><h1>Eat a Burger!</h1></header>
 </div>
 <div class="container">
-<div class="row">
-  <div class="col-xs-12">
-  </div>
-</div>
 <div class="row">
   <div class="col-xs-12">
     <h2>Add a Burger</h2>
@@ -22,7 +18,7 @@
 </div>
 <div class="row">
   <div class="col-xs-6">
-  <h2>Burgers That Are Regurgitated!</h2>
+  <h2>Burgers to be eaten!</h2>
 
   <ul>
     {{#each burgers}}
@@ -43,6 +39,7 @@
   </div>
   <div class="col-xs-6">
     <h2>Burgers That Are Devoured!</h2>
+    <h3>You can reorder an eaten burger if desired.</h3>
     <ul>
       {{#each burgers}}
         {{#if this.devoured}}

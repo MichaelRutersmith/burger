@@ -1,4 +1,8 @@
+//create the connection variable connecting it to connection.js
+
 var connection = require("./connection.js");
+
+//set up ORM for the mysql interactions
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -21,6 +25,7 @@ function objToSql(ob) {
 }
 
 var orm = {
+    //select from all
     all: function(tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
@@ -30,7 +35,7 @@ var orm = {
             cb(result);
         });
     },
-
+    //create a new row in the database 
     create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
 
@@ -50,7 +55,7 @@ var orm = {
             cb(result);
         });
     },
-
+    //change the boolean for devoured from false to true
     eat: function(table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
@@ -89,5 +94,5 @@ var orm = {
 
 };
 
-
+//export orm
 module.exports = orm;

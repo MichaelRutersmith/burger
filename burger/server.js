@@ -7,10 +7,6 @@ var methodOverride = require("method-override");
 var exphbs = require('express-handlebars');
 var PORT = process.env.PORT || 3000; 
 
-
-
-
-
 // Serve static public
 
 app.use(express.static("public"));
@@ -26,14 +22,6 @@ app.set("view engine", "handlebars");
 var router = require("./controllers/burgers_controller");
 
 app.use(router);
-
-
-
-
-
-
-
-
 
 
 app.listen(PORT, function() {
