@@ -16,6 +16,10 @@ router.get("/", function(req, res) {
   });
 });
 
+app.get("/favicon.ico", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/favicon.ico"));
+});
+
 router.post("/burger/create", function(req, res) {
   burger.create(req.body.name, function(result) {
     console.log(result)
